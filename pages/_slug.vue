@@ -28,7 +28,7 @@
                 </div>
             </nav>
         </div>
-        <nuxt-content class="prose prose-sm prose-lg prose-xl prose-2xl" :document="article" />
+        <nuxt-content class="prose prose-sm prose-lg" :document="article" />
         <prev-next :prev="prev" :next="next" />
     </article>
     </div>
