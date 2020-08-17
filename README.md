@@ -1,4 +1,6 @@
-# app
+# Nuxt content blog theme
+![alt text](https://i.imgur.com/tWQnAmC.png)
+
 
 ## Build Setup
 
@@ -17,4 +19,4 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
