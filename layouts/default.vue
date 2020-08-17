@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
+    <header class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-4">
       <div class="flex-1 flex justify-between items-center">
         <nuxt-link to="/">
          <svg width="37" height="20" viewBox="0 0 37 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,20 +34,20 @@
       </label>
       <!-- <input class="hidden" type="checkbox" id="menu-toggle" /> -->
 
-      <div :class="open? 'hidden': 'block'" class="lg:flex lg:items-center lg:w-auto w-full" id="menu">
+      <div :class="open? 'block': 'hidden'" class="lg:flex lg:items-center lg:w-auto w-full" id="menu">
         <nav>
           <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
-            <li>
+            <li @click="changeOpen">
               <nuxt-link to="/"
                 class="lg:p-4 py-3 px-2 rounded md:rounded-none  md:px-0 block border-b-2 border-transparent hover:bg-gray-100 mb-2 md:mb-0 md:hover:border-indigo-400"
               >Categories</nuxt-link>
             </li>
-            <li>
+            <li @click="changeOpen">
               <nuxt-link to="/"
                 class="lg:p-4 py-3 px-2 rounded md:rounded-none md:px-0 block border-b-2 border-transparent hover:bg-gray-100 mb-2 md:mb-0 md:hover:border-indigo-400"
               >About</nuxt-link>
             </li>
-            <li>
+            <li @click="changeOpen">
               <nuxt-link to="/"
                 class="lg:p-4 py-3 px-2 rounded md:rounded-none md:px-0 block border-b-2 border-transparent hover:bg-gray-100 mb-2 md:mb-0 md:hover:border-indigo-400"
               >Support</nuxt-link>
@@ -78,6 +78,9 @@ export default {
   },
   methods : {
     setOpen(){
+      this.open = !this.open
+    },
+    changeOpen(){
       this.open = !this.open
     }
   }
