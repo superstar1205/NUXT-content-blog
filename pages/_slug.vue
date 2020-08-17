@@ -1,5 +1,16 @@
 <template>
     <div>
+    <div v-if="social" class="w-20 h-auto share hidden md:flex flex-col items-center justify-between">
+       <a :href="`https://www.facebook.com/sharer.php?u=https://nuxt-content-blog-theme.vercel.app/${article.slug}`" target="_blank" class="mb-5">
+           <img src="https://img.icons8.com/color/48/000000/facebook-new.png"  width="45"/>
+       </a>
+       <a href="#" class="mb-5">
+          <img src="https://img.icons8.com/fluent/48/000000/twitter.png" width="45"/>
+       </a>
+       <a href="#" class="mb-5">
+           <img src="https://img.icons8.com/color/48/000000/link.png" width="45"/>
+       </a>
+    </div>
     <div class="article-head w-full h-auto bg-indigo-200 mb-8">
         <div class="flex flex-col">
             <div class="container mx-auto flex items-center justify-center h-auto">
@@ -52,9 +63,28 @@
     },
     methods: {
         formatDate(date) {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' }
-        return new Date(date).toLocaleDateString('en', options)
+            const options = { year: 'numeric', month: 'long', day: 'numeric' }
+            return new Date(date).toLocaleDateString('en', options)
+        },
+        updateScroll() {
+            this.scrollPosition = window.scrollY
+            if(this.scrollPosition > 340){
+                this.social  = true
+            }
+            else{
+                this.social = false
+            }
         }
+    },
+    data(){
+        return{
+            scrollPosition: null,
+            social: false
+        }
+    },
+    mounted() {
+        window.addEventListener('scroll', this.updateScroll);
+        
     }
   }
 </script>
@@ -65,6 +95,11 @@ html {
 .article{
     max-width: 768px!important;
     position: relative;
+}
+.share{
+    position: fixed;
+    top: 10rem;
+    right: 10rem;
 }
 .table-of-content{
     position: fixed;

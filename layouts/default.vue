@@ -19,7 +19,7 @@
         </nuxt-link>
       </div>
 
-      <label for="menu-toggle" class="pointer-cursor lg:hidden block">
+      <label for="menu-toggle" class="cursor-pointer lg:hidden block">
         <svg
           @click="setOpen"
           class="fill-current text-gray-900"
