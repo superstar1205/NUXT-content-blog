@@ -110,4 +110,8 @@ font-size: 22px;
 .nuxt-content p {
 margin-bottom: 20px;
 }
+.nuxt-content h1 {
+font-size: 2.25rem;
+font-weight: 600;  
+}
 </style>
