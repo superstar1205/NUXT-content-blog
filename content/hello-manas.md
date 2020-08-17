@@ -77,6 +77,7 @@ It's probably important that images look okay here by default as well:
   <img
     src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
     alt=""
+    loading="lazy"
   />
   <figcaption>
     Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of

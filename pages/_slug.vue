@@ -28,7 +28,7 @@
                 </div>
             </nav>
         </div>
-        <nuxt-content class="prose " :document="article" />
+        <nuxt-content class="prose prose-sm prose-lg prose-xl prose-2xl" :document="article" />
         <prev-next :prev="prev" :next="next" />
     </article>
     </div>
@@ -66,7 +66,7 @@ html {
     max-width: 768px!important;
     position: relative;
 }
-.table-of-content{
+/* .table-of-content{
     position: fixed;
     top: 0;
     right: -10%;
@@ -78,9 +78,9 @@ html {
 }
 pre{
     border-radius: 8px;
-}
+} */
 /* Table */
-table {
+/* table {
     width: 100%!important;
     max-width: 100%;
     margin-bottom: 1rem;
@@ -109,5 +109,5 @@ font-size: 22px;
 }
 .nuxt-content p {
 margin-bottom: 20px;
-}
+} */
 </style>
