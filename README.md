@@ -1,5 +1,5 @@
 # Nuxt content blog theme
-![alt text](https://imgur.com/tWQnAmC)
+![alt text](https://i.imgur.com/tWQnAmC.png)
 
 
 ## Build Setup
